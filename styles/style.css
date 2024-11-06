@@ -1,73 +1,122 @@
-body{
-    font-family: Montserrat;
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
     background-color: white;
     color: #00113a;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-.title-bar{
+/* Title Bar */
+.title-bar {
     height: 12.5vh;
-    width: 100pvh;
-    background-color: white
+    width: 100%;
+    background-color: white;
 }
 
-.nav-bar{
+/* Navigation Bar */
+.nav-bar {
     height: 8vh;
-    width: 100pvh;
+    width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #cf2e2e;
 }
 
-button{
+button {
     background-color: transparent;
     border: 0;
     color: white;
     font-family: Montserrat;
-    width: 150px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-.nav-gap{
-    width: 40px;
-}.nav-gap0{
-    width: 50px;
-}
-
-button:hover{
+button:hover {
     background-color: #b92727;
 }
 
-.what-is-this, .what-we-need, .what-is-this, .how-to-download{
-    padding: 30px;
-    padding-right: 60px;
-    width: 800px;
-    text-align: left;
-}
-
-.home-page, .home-page2{
+/* Content Sections */
+.home-page, .home-page2 {
     display: flex;
-}
-
-th{
-    padding: 50px;
-}
-td{
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
 }
 
+.what-is-this, .what-you-get, .how-to-download {
+    padding: 20px;
+    max-width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Table Styles */
 table, th, td {
-    border: 1px solid black; /* Sets a solid black border for table, headers, and cells */
-    border-collapse: collapse; /* Ensures borders are not doubled */
+    border: 1px solid black;
+    border-collapse: collapse;
 }
+
 th, td {
-    padding: 10px; /* Adds padding inside cells for readability */
-    text-align: center; /* Centers text in each cell */
+    padding: 10px;
+    text-align: center;
 }
 
-.no{
-    color: red;
+/* Media Queries */
+@media (max-width: 1024px) {
+    .home-page, .home-page2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
 }
 
-.yes{
-    color: green;
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+
+    .home-page, .home-page2 {
+        padding: 10px;
+    }
+
+    .what-is-this, .what-you-get, .how-to-download {
+        max-width: 90%;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-page, .home-page2 {
+        padding: 5px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .what-is-this, .what-you-get, .how-to-download {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
 }
