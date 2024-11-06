@@ -1,0 +1,73 @@
+body{
+    font-family: Montserrat;
+    background-color: white;
+    color: #00113a;
+    padding: 0px;
+    margin: 0px;
+}
+
+.title-bar{
+    height: 12.5vh;
+    width: 100pvh;
+    background-color: white
+}
+
+.nav-bar{
+    height: 8vh;
+    width: 100pvh;
+    display: flex;
+    background-color: #cf2e2e;
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-family: Montserrat;
+    width: 150px;
+}
+
+.nav-gap{
+    width: 40px;
+}.nav-gap0{
+    width: 50px;
+}
+
+button:hover{
+    background-color: #b92727;
+}
+
+.what-is-this, .what-we-need, .what-is-this, .how-to-download{
+    padding: 30px;
+    padding-right: 60px;
+    width: 800px;
+    text-align: left;
+}
+
+.home-page, .home-page2{
+    display: flex;
+}
+
+th{
+    padding: 50px;
+}
+td{
+    padding: 20px;
+}
+
+table, th, td {
+    border: 1px solid black; /* Sets a solid black border for table, headers, and cells */
+    border-collapse: collapse; /* Ensures borders are not doubled */
+}
+th, td {
+    padding: 10px; /* Adds padding inside cells for readability */
+    text-align: center; /* Centers text in each cell */
+}
+
+.no{
+    color: red;
+}
+
+.yes{
+    color: green;
+}
